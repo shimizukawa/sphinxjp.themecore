@@ -16,7 +16,7 @@ classifiers = [
 ]
 
 setup(
-     name='sphinxcontrib-themes-core',
+     name='sphinxjp.themecore',
      version=version,
      description='A sphinx theme plugin extension.',
      long_description=long_description,
@@ -24,7 +24,7 @@ setup(
      keywords=['sphinx', 'theme'],
      author='Takayuki SHIMIZUKAWA',
      author_email='shimizukawa at gmail dot com',
-     url='http://bitbucket.org/shimizukawa/sphinxcontrib-themes-core',
+     url='http://bitbucket.org/shimizukawa/sphinxjp.themecore',
      license='MIT',
      packages=find_packages('src'),
      package_dir={'': 'src'},

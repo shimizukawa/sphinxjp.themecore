@@ -9,7 +9,7 @@ Setup
 =====
 Make environment with easy_install::
 
-    $ easy_install sphinxcontrib-themes-core
+    $ easy_install sphinxjp.themecore
 
 
 Make your plugins
@@ -21,7 +21,7 @@ in your setup.py::
 
     entry_points = """
         [sphinx_themes]
-        path = sphinxcontrib.themes.s6:get_path
+        path = sphinxjp.themes.s6:get_path
     """
 
 and write :func:`get_path` function that return path of ``Sphinx themes``.
@@ -34,7 +34,7 @@ entry_points in your setup.py::
 
     entry_points = """
         [sphinx_directives]
-        setup = sphinxcontrib.themes.s6:setup_directives
+        setup = sphinxjp.themes.s6:setup_directives
     """
 
 and write :func:`setup_directives` function that receive `app` argument
