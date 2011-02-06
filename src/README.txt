@@ -24,7 +24,7 @@ in your setup.py::
         path = sphinxjp.themes.s6:get_path
     """
 
-and write :func:`get_path` function that return path of ``Sphinx themes``.
+and write `get_path` function that return path of ``Sphinx themes``.
 ``Sphinx themes`` directory include one or more theme directories.
 
 directives
@@ -37,7 +37,7 @@ entry_points in your setup.py::
         setup = sphinxjp.themes.s6:setup_directives
     """
 
-and write :func:`setup_directives` function that receive `app` argument
+and write `setup_directives` function that receive `app` argument
 and return None. setup_directives is same as sphinx extension's setup
 function. See Sphinx extension document for more information.
 
