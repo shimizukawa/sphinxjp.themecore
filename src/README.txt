@@ -57,7 +57,7 @@ See the LICENSE file for specific terms.
 History
 =======
 
-0.1 (unreleased)
+0.1.0 (2011/2/6)
 -----------------
 * first release
 
