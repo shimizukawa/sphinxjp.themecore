@@ -18,7 +18,7 @@ classifiers = [
 setup(
      name='sphinxjp.themecore',
      version=version,
-     description='A sphinx theme plugin extension.',
+     description='A sphinx theme plugin support extension. #sphinxjp',
      long_description=long_description,
      classifiers=classifiers,
      keywords=['sphinx', 'theme'],
