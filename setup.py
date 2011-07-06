@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 import os, sys
 
-version = '0.1.0'
+version = '0.1.1'
 long_description = \
         open(os.path.join("src","README.txt")).read()
 
@@ -26,6 +26,7 @@ setup(
      author_email='shimizukawa at gmail dot com',
      url='http://bitbucket.org/shimizukawa/sphinxjp.themecore',
      license='MIT',
+     namespace_packages=['sphinxjp'],
      packages=find_packages('src'),
      package_dir={'': 'src'},
      package_data = {'': ['buildout.cfg']},

@@ -57,6 +57,10 @@ See the LICENSE file for specific terms.
 History
 =======
 
+0.1.1 (2011/7/6)
+------------------
+* fixed namespace package declaration missing, thank you togakushi!
+
 0.1.0 (2011/2/6)
 -----------------
 * first release
