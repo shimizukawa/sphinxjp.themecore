@@ -57,6 +57,11 @@ See the LICENSE file for specific terms.
 History
 =======
 
+0.1.2 (2011/7/9)
+------------------
+* fixed issue #1: html_theme_path definition in conf.py discard all
+  sphinxjp.themes.* paths.
+
 0.1.1 (2011/7/6)
 ------------------
 * fixed namespace package declaration missing, thank you togakushi!
