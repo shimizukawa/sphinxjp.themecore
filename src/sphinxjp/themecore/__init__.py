@@ -11,6 +11,7 @@ class PathDictProxy(dict):
         self._proxies = {}
 
     def set_proxy(self, key, value):
+        self[key] = value
         self._proxies[key] = value
 
     def __setitem__(self, key, value):
@@ -32,6 +33,9 @@ def setup_themes(app):
 
     if theme_paths:
         theme_paths.extend(app.config.html_theme_path)
+        # sphinx/config.py (L201) manipulate config.__dict__ directory.
+        # this is tricky hook for such implementation that
+        # works only for sphinx-1.0.7, perhaps.
         app.config.__dict__ = PathDictProxy(app.config.__dict__)
         app.config.__dict__.set_proxy('html_theme_path', theme_paths)
 
