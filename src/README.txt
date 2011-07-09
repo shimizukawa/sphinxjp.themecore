@@ -53,20 +53,3 @@ License
 Licensed under the `MIT license <http://www.opensource.org/licenses/mit-license.php>`_ .
 See the LICENSE file for specific terms.
 
-
-History
-=======
-
-0.1.2 (2011/7/9)
-------------------
-* fixed issue #1: html_theme_path definition in conf.py discard all
-  sphinxjp.themes.* paths.
-
-0.1.1 (2011/7/6)
-------------------
-* fixed namespace package declaration missing, thank you togakushi!
-
-0.1.0 (2011/2/6)
------------------
-* first release
-
