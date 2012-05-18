@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import sys
 import pkg_resources
 
 
@@ -24,7 +25,13 @@ def setup_themes(app):
     theme_paths = []
 
     for plugin in pkg_resources.iter_entry_points('sphinx_themes'):
-        m = plugin.load()
+        try:
+            m = plugin.load()
+        except ImportError:
+            msg = "warn: Can't import '" + plugin.module_name + "'\n"
+            sys.stderr.write(msg)
+            continue
+        
         if callable(m):
             path = m()
         else:
@@ -42,7 +49,13 @@ def setup_themes(app):
 
 def setup_directives(app):
     for plugin in pkg_resources.iter_entry_points('sphinx_directives'):
-        module_setup = plugin.load()
+        try:
+            module_setup = plugin.load()
+        except ImportError:
+            msg = "warn: Can't import '" + plugin.module_name + "'\n"
+            sys.stderr.write(msg)
+            continue
+        
         module_setup(app)
 
 
