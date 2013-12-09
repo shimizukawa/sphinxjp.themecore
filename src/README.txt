@@ -1,5 +1,35 @@
 A sphinx theme plugin extension.
 
+.. warning::
+
+   For users:
+   sphinxjp.themecore will be deprecated. Please use theme plugins with
+   Sphinx-1.2.
+
+
+.. warning::
+
+   For theme developers:
+   sphinxjp.themecore's 'sphinx_themes' entry point feature is provided on the
+   Sphinx from 1.2(b3) release. However 'sphinx_directives' feature is not
+   provided by the Sphinx.
+
+   If your theme plugin provides only 'sphinx_themes' entry point, you need
+   remove ``extensions = ['sphinxjp.themecore']`` line from your documentation
+   and remove ``sphinxjp.themecore`` dependency from install_requires in the
+   setup.py. There is a example of change to support both before and after
+   Sphinx-1.2:
+   https://bitbucket.org/shimizukawa/sphinxjp.themes.sphinxjp/commits/c66313e
+
+   If your theme plugin provides 'sphinx_directives' entry point too,
+   additionaly you need write your setup() function in your extension root
+   package instead of such as setup_directive() and need change your
+   documentation's installation section with like:
+   "set ``extensions=["sphinxjp.themes.s6"]`` instead of 'sphinx.themecore'".
+   There is a example of change to support both before and after Sphinx-1.2:
+   https://bitbucket.org/shimizukawa/sphinxjp.themes.s6/commits/ed91ae537
+
+
 Features
 ========
 * provide theme template collection by using setuptools plugin mechanism.

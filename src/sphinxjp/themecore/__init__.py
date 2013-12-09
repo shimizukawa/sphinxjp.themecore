@@ -59,6 +59,22 @@ def setup_directives(app):
         module_setup(app)
 
 
+def is_supported_theme_plugin_feature():
+    import sphinx
+    import re
+    _m = re.match(r'([\d\.]+)(.*)', '1.2b3')
+    if not _m:
+        return False
+    _version, _sub = _m.groups()
+    return _version >= '1.2' and not(_version == '1.2' and _sub)
+
+
 def setup(app):
-    setup_themes(app)
+    import warnings
+    warnings.warn(
+        "sphinxjp.themecore is deprecated. Please use Sphinx-1.2",
+        DeprecationWarning)
+
+    if not is_supported_theme_plugin_feature():
+        setup_themes(app)
     setup_directives(app)
